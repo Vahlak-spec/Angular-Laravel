@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.navbar .navbar__title {
+  font-size: 30px;
+}
+
+.navbar .navbar__links {
+  width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar .navbar__links .active {
+  border-bottom: 2px solid white;
+  border-radius: 0;
+}
+
+.navbar .navbar__button {
+  font-size: 18px;
+}

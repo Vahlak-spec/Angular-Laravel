@@ -1,0 +1,43 @@
+<mat-toolbar color="primary" class="navbar mat-elevation-z6">
+  <span class="navbar__title">Navbar</span>
+  <div class="navbar__links">
+    <button
+      class="navbar__button"
+      mat-button
+      [class.active]="isHomeRouteActive()"
+      routerLink=""
+    >
+      List of articles
+    </button>
+    <button
+      class="navbar__button"
+      mat-button
+      routerLinkActive="active"
+      routerLink="/add"
+    >
+      Add new article
+    </button>
+    <button
+      *ngIf="!isUserAuthorized"
+      class="navbar__button"
+      mat-button
+      routerLinkActive="active"
+      routerLink="/login"
+    >
+      Login
+    </button>
+    <button
+      *ngIf="isUserAuthorized"
+      [mat-menu-trigger-for]="logout"
+      class="navbar__button"
+      mat-button
+    >
+      {{ userName }}
+    </button>
+    <mat-menu #logout="matMenu">
+      <button class="navbar__button" mat-menu-item routerLink="/logout">
+        Logout
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

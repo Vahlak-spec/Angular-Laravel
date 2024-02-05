@@ -1,0 +1,47 @@
+.container {
+  margin: 40px auto 40px;
+  width: 1200px;
+}
+
+.container .form__title_container {
+  display: block;
+}
+
+.container .form__title_container .form__title {
+  margin: 46px 0;
+  text-align: center;
+  font-size: 36px;
+}
+
+.container .form__inputs_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .form__inputs_container .form__input {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.container .form__inputs_container .form__input .form__input_error {
+  font-size: 20px;
+  margin: 4px 0;
+}
+
+.container .form__button_container {
+  text-align: center;
+}
+
+.container .form__button_container .form__button_submit {
+  margin: 30px auto;
+  min-width: 240px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.container .form__span {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}

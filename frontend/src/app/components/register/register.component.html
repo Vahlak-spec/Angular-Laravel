@@ -1,0 +1,92 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-card class="container">
+    <mat-card-header class="form__title_container">
+      <mat-card-title>
+        <h1 class="form__title">Registration</h1>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="form__inputs_container">
+      <mat-form-field class="form__input">
+        <mat-label>Name</mat-label>
+        <input formControlName="name" matInput />
+        <mat-error
+          *ngIf="form.get('name')!.hasError('required')"
+          class="form__input_error"
+          ><span>Name is required</span></mat-error
+        >
+        <mat-error
+          *ngIf="form.get('name')!.hasError('minlength')"
+          class="form__input_error"
+          ><span>Name is too short</span></mat-error
+        >
+        <mat-error
+          *ngIf="form.get('name')!.hasError('maxlength')"
+          class="form__input_error"
+          ><span>Name is too long</span></mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field class="form__input">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput />
+        <mat-error
+          *ngIf="form.get('email')!.hasError('required')"
+          class="form__input_error"
+          ><span>Email is required</span></mat-error
+        >
+        <mat-error
+          *ngIf="form.get('email')!.hasError('email')"
+          class="form__input_error"
+          ><span>Email is too short</span></mat-error
+        >
+        <mat-error
+          *ngIf="form.get('email')!.hasError('maxlength')"
+          class="form__input_error"
+          ><span>Email is too long</span></mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field class="form__input">
+        <mat-label>Password</mat-label>
+        <input type="password" formControlName="password" matInput />
+        <mat-error
+          *ngIf="form.get('password')!.hasError('required')"
+          class="form__input_error"
+          ><span>Password is required</span></mat-error
+        >
+        <mat-error
+          *ngIf="form.get('password')!.hasError('minlength')"
+          class="form__input_error"
+          ><span>Password is too short</span></mat-error
+        >
+        <mat-error
+          *ngIf="form.get('password')!.hasError('maxlength')"
+          class="form__input_error"
+          ><span>Password is too long</span></mat-error
+        >
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-footer class="form__button_container">
+      <button
+        class="form__button"
+        mat-raised-button
+        color="primary"
+        type="submit"
+      >
+        Register
+      </button>
+      <span class="form__span">Already have an account?</span>
+      <button
+        class="form__button"
+        mat-raised-button
+        color="accent"
+        type="submit"
+        routerLink="/login"
+      >
+        Login
+      </button>
+    </mat-card-footer>
+  </mat-card>
+</form>

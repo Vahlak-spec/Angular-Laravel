@@ -1,0 +1,18 @@
+<mat-card class="container">
+  <mat-card-header class="form__title_container" [style.display]="'block'">
+    <mat-card-title>
+      <h1 class="form__title">Are you sure you want to log out?</h1>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="form__button_container">
+    <button
+      class="form__button_submit"
+      mat-raised-button
+      color="accent"
+      (click)="logout()"
+    >
+      Log out
+    </button>
+  </mat-card-content>
+</mat-card>

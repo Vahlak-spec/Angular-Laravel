@@ -1,0 +1,66 @@
+<h1 mat-dialog-title class="modal__title">Editing</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-dialog-content class="form__inputs_container">
+    <mat-form-field class="form__input">
+      <mat-label>Title</mat-label>
+      <input formControlName="title" matInput />
+
+      <mat-error
+        *ngIf="form.get('title')!.hasError('required')"
+        class="form__input_error"
+        ><span>Title is required</span></mat-error
+      >
+      <mat-error
+        *ngIf="form.get('title')!.hasError('minlength')"
+        class="form__input_error"
+        ><span>Title is too short</span></mat-error
+      >
+      <mat-error
+        *ngIf="form.get('title')!.hasError('maxlength')"
+        class="form__input_error"
+        ><span>Title is too long</span></mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="form__input">
+      <mat-label>Text</mat-label>
+      <textarea formControlName="content" matInput> </textarea>
+
+      <mat-error
+        *ngIf="form.get('content')!.hasError('required')"
+        class="form__input_error"
+        ><span>Text is required</span></mat-error
+      >
+      <mat-error
+        *ngIf="form.get('content')!.hasError('minlength')"
+        class="form__input_error"
+        ><span>Text is too short</span></mat-error
+      >
+      <mat-error
+        *ngIf="form.get('content')!.hasError('maxlength')"
+        class="form__input_error"
+        ><span>Text is too long</span></mat-error
+      >
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="form__buttons_container">
+    <button
+      class="form__button"
+      mat-raised-button
+      mat-dialog-close
+      color="accent"
+    >
+      Cancel
+    </button>
+    <button
+      class="form__button"
+      mat-raised-button
+      mat-dialog-close
+      color="primary"
+      type="submit"
+    >
+      Save
+    </button>
+  </mat-dialog-actions>
+</form>

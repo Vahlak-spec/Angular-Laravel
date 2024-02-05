@@ -1,0 +1,47 @@
+.container {
+  margin: 40px auto 40px;
+  width: 1200px;
+}
+
+.container .table__title_container {
+  display: block;
+}
+
+.container .table__title_container .table__title {
+  margin: 46px 0;
+  text-align: center;
+  font-size: 36px;
+}
+
+.container .table__container {
+  padding: 0 100px;
+}
+
+.cell__title {
+  text-align: center;
+}
+
+.cell__content div {
+  max-width: 400px;
+  max-height: 4em;
+  overflow-y: scroll;
+  word-wrap: break-word;
+  padding: 8px;
+}
+
+.mat-mdc-cell {
+  word-wrap: break-word;
+}
+
+.cell__content div::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cell__content div::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.column {
+  text-align: center;
+}

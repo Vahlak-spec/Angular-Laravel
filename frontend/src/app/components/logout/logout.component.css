@@ -1,0 +1,31 @@
+.container {
+  margin: 40px auto 40px;
+  width: 1200px;
+}
+
+.container .form__title_container {
+  display: block;
+}
+
+.container .form__title_container .form__title {
+  margin: 46px 0;
+  text-align: center;
+  font-size: 36px;
+}
+
+.container .form__button_container {
+  text-align: center;
+}
+
+.container .form__button_container .form__button_submit {
+  margin: 30px auto;
+  min-width: 240px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.container .form__span {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
